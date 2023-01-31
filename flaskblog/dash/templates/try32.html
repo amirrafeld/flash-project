@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Flask with Dash</title>
+    </head>
+    <body>
+        <h1>Welcome to Flask app</h1>
+        <div id="dash-container"></div>
+          {{dash_app.Div}}
+        {% for script in scripts %}
+            {{ script|safe }}
+        {% endfor %}
+        {% for css in css %}
+            {{ css|safe }}
+        {% endfor %}
+    </body>
+</html>

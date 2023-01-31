@@ -1,0 +1,48 @@
+{%extends "layout1.html"%}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='test2.css') }}">
+<div class="container">
+    <form action=""  method="post">
+        {{ stock.hidden_tag() }}
+        <div class="form__title">SHORTS AND OPTIONS INFO</div>
+        <div class="form__item">
+            {{ stock.stock1.label(class="form__label") }}
+            {% if stock.stock1.errors %}
+                {{ stock.stock1(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in stock.stock1.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                </div>
+            {% else %}
+                {{ stock.stock1(class="form__input") }}
+            {% endif %}
+        </div>
+        <div class="form__item">
+            {{ stock.date.label(class="form__label") }}
+                {% if stock.date.errors %}
+                    {{ stock.date(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in stock.date.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ stock.date(class="form__input") }}
+                {% endif %}
+        </div>
+        <div class="form__item" id="btn1">
+            {{ stock.submit(class="form__btn") }}
+        </div>
+    </form>
+    {% if fig %}
+    <div class="warpper3">
+        {% autoescape off %}
+        {{ fig }}
+        {% endautoescape %}
+    </div>
+    {% endif %}
+
+</div>
+{% endblock content %}
+

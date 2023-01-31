@@ -1,0 +1,59 @@
+{% extends "layout1.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='test2.css') }}">
+    <div class="container">
+        <form action="",  method="post">
+            {{ form.hidden_tag() }}
+            <div class="form__title">Insider's Buy & Sale </div>
+            <div class="form__item">
+                {{ form.ticker.label(class="form__label") }}
+                {% if form.ticker.errors %}
+                    {{ form.ticker(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                    {% for error in form.ticker.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                        {{ form.ticker(class="form__input") }}
+                {% endif %}
+              </div>
+              <div class="form__item">
+                  {{ form.max_result1.label(class="form__label") }}
+                  {% if form.max_result1.errors %}
+                        {{ form.max_result1(class="form-control form-control-lg is-invalid") }}
+                         <div class="invalid-feedback">
+                             {% for error in form.search.errors %}
+                                    <span>{{ error }}</span>
+                             {% endfor %}
+                         </div>
+                  {% else %}
+                        {{ form.max_result1(class="form__input") }}
+                  {% endif %}
+              </div>
+              <div class="form__item">
+                        {{ form.days_ago.label(class="form__label") }}
+                        {% if form.days_ago.errors %}
+                            {{ form.days_Ago(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.days_ago.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.days_ago(class="form__input") }}
+                        {% endif %}
+              </div>
+               <div class="form__item" id="btn1" >
+                        {{ form.submit(class="form__btn") }}
+                    </div>
+        </form>
+        {% if fig1 %}
+                <div class="warpper3">
+                    {% autoescape off %}
+                    {{ fig1 }}
+                    {% endautoescape %}
+                </div>
+        {% endif %}
+    </div>
+{% endblock content %}

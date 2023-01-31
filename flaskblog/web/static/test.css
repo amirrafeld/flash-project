@@ -1,0 +1,23 @@
+
+.form__item{
+ display:flex;
+  gap:0.5rem;
+  box-sizing: border-box;
+    flex-direction:column;
+    font-size:1rem;
+    padding: 0.5rem 0.5rem  0.5rem 0rem;
+    margin:0.5rem 0.5rem 0.5rem 1.5rem;}
+
+.form__title{
+   padding: 1rem 1rem 0 1rem;
+    font-size: 1.5rem;
+    }
+ 
+
+.form__input{
+  width: min(75vw,230px);
+  height:min(15vw,35px)}
+
+#btn1{
+  width: min(81vw,240px)}
+

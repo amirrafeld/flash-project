@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+.container1{
+  color:#ffffff;
+  font-family:'Source Sans Pro',sans-serif;
+   font-weight:100;}
+form{
+ margin-left:20px;}
+.form__title{
+      margin-top:15px;
+      font-size:2em;}
+
+.form__item{
+        margin-left:15px;
+        display: flex;
+        max-width: 9%;
+        min-width:200px;;
+        flex-direction:column;
+        margin-bottom:5px;}
+.form__title{
+      padding:10px 0;}
+
+
+.form__label{
+      padding:10px 0;}
+
+.form__input{
+   webkit-appearance:none;
+   max-width:175px;
+
+    font-size:0.9em
+    outline:none;
+    transition:background 0.25,border-color 0.25s color 0.25;}
+
+
+.form__input:focus{background:#ffffff;
+ font-size:1em}
+
+.form__input:placeholder{
+    font-size:0.8em;}
+
+textarea{
+ font-size:16px;
+ max-height: 32px;
+ }
+
+select{
+ max-height:35px;
+  font-family:'Source Sans Pro',sans-serif;
+   }
+
+
+#btn1{
+ margin-top:15px;
+ padding-right:15px;}
+
+#btn1 input{
+   margin-top:19px;
+   border-radius:10px;
+   font-size:1em;
+   margin-left:auto ;
+   padding:10px;
+
+   color:#ffffff;
+   background-color: #3A3B3C;
+   border-style:solid;
+   border-color:#242526;}
+
+#btn1 input:hover {
+  border-color:#1589FF}
+
+

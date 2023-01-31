@@ -1,0 +1,53 @@
+{%extends "layout1.html"%}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sentiemnt.css') }}">
+   <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Twitter analysis</legend>
+                <div class="form-group">
+                    {{ form.search.label(class="form-control-label") }}
+                    {% if form.search.errors %}
+                        {{ form.search(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.search.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.search(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.number_of_search.label(class="form-control-label") }}
+                    {% if form.number_of_search.errors %}
+                        {{ form.number_of_search(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.number_of_search.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.number_of_search(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+
+
+            </div>
+
+        </form>
+        {% if fig1 %}
+            <div class="warpper">
+                        <img src="{{url_for('static',filename='matplotlib/' + fig1)}}" alt="no  content",class="option">
+            </div>
+        {% endif %}
+
+
+    </div>
+
+{% endblock content %}

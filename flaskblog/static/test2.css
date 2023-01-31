@@ -1,0 +1,49 @@
+form{
+ margin-left:2px;
+ margin-top:5px;
+ flex-shrink:5;}
+
+
+.form__title{
+      margin-top:15px;
+      font-size:1rem;}
+
+div ul {
+   display:flex;
+   flex-direction: row;
+   padding-left:0}
+
+
+.form__item{
+       display:flex;
+       font-size:0.75rem;
+       padding:10px 0 10px ;
+       flex-direction: column}
+
+.form__input{
+   width: min(20vw,130px);
+   padding-top:4px;}
+
+div ul li {
+ display:flex;
+ flex-direction:column;
+ margin-right:min(4.1vw,26px);}
+
+.secondLi{
+ margin-right:0}
+#time_period{
+ width:min(22vw,117px)}
+
+#time_interavel{
+ width:min(22vw,117px);
+  margin: 0 0 5px 0;}
+
+.form__item1{
+ margin-left:min(3vw,25px);}
+
+.ul2 li{
+ box-sizing:border-content;
+ font-size:0.75rem;
+ margin-right:20px;
+ width:min(25vw,130px)}
+

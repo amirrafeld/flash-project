@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+html{
+  font-weight:150;
+  color: #ffffff;
+    height:100%;
+    width:100%;
+    text-decoration:none;
+    font-family:'Source Sans Pro',sans-serif;
+    margin:0;
+     padding:0;
+    }
+
+
+body{
+  height:100%;
+  width: 100%;
+  font-size:1rem;
+  color: #ffffff;
+  width:100%;
+  background-color: #121212;
+ background:linear-gradient(to bottom, #404040, #282828)}
+
+
+*{
+   font-size:1rem;
+   marker:none;
+   text-direction:none;
+
+       font-family:'Source Sans Pro',sans-serif;}
+li{list-style-type: none;}
+
+
+img{
+     max-width:30px;
+        max-height:30px,}
+
+nav{
+ font-size: 0.8rem;
+ min-height:80px;
+ background-color:#181818;
+ display:flex;
+ flex-direction:row;
+ justify-content:start;
+ flex-warp:no warp;}
+
+.ul1{
+ display:flex;
+ padding-left:10px;
+ flex-warp:no-warp;
+  align-items:baseline;
+  flex-grow:3;
+  margin: auto 0;
+  }
+
+.warrper1{
+     display:flex;
+     max-height:35px;
+     margin:auto 5px;
+      flex-warp:no warp;
+      tex-decoration:none;}
+
+.warpper1 a{
+      color:white;}
+
+ul li a {
+    color: white;
+      padding:0 20px;}
+
+
+ul li a:hover{
+ color:white}
+
+.navbar-nav{
+   display:flex;
+   margin-left:auto;
+   flex-shrink:4;
+   flex-direction:row;
+   align-items:center;
+    margin-left:  auto ;
+    padding:0 20px 0 0;}
+.navbar-nav li{
+ margin-right:20px;}
+
+ul li img {
+        max-width:25px;
+        max-height:25px,
+         -webkit-filter: invert(86%); /* Safari/Chrome */
+        filter: invert(80%);
+        }
+
+
+
+.form__btn{
+   margin-top:10px;
+   margin-left:auto ;
+   color:#ffffff;
+   width: min(45vw,140px);
+   height: min(30vw, 40px);
+   box-shadow: 4px 4px 4px #3A3B3C;
+
+   background-color: #3A3B3C;
+   border-style:solid;
+   border-color:#242526;}
+
+.form__btn:hover{
+  border-color:#1589FF;}
+#btn1{
+  width: min(85vw,260px)}
+
+
+.container{
+
+ margin:auto 0;
+ color:#ffffff;
+  font-weight:150px;
+   display:flex;
+   margin-left:0px;
+    flex-direction:row;
+    align-items:top;}
+
+
+.warpper3{
+ margin-top:10px;
+ margin-left:4px;
+ flex-grow:6;}
+
+

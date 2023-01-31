@@ -1,0 +1,28 @@
+{%extends "layout1.html" %}
+{% block content%}
+    <h1 class="head">BREAKING NEWS- Eastern Time (ET)</h1>
+    <div class="container h-75 w-100">
+        <div class='row col-lg-8 col-9'>
+            <div class="col">
+                {% for key,val in posts1.items():%}
+                <div class="box mb-5">
+                    <li class="fs-4">
+                        {{key}} : {{val}}
+                    </li>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+

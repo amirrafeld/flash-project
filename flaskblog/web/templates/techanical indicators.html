@@ -1,0 +1,121 @@
+{% extends "layout1.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='test2.css' ) }}">
+    <div class="container">
+        <form action="",  method="post">
+            {{ form.hidden_tag() }}
+            <div class="form__title">Techanical Indicators</div>
+            <div class="form__item">
+                {{ form.ticker.label(class="form__label") }}
+
+                {% if form.ticker.errors %}
+                {{ form.ticker(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.ticker.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.ticker(class="form__input") }}
+                {% endif %}
+            </div>
+            <div class="form__item">
+                <ul>
+                    <li>
+                        {{ form.time_period.label(class="form__label")}}
+                        {{ form.time_period(class="form__input") }}
+                    </li>
+                    <li class="secondLi">
+                        {{form.time_interavel.label(class="form__label")}}
+                        {{form.time_interavel(class="form__input") }}
+                    </li>
+                </ul>
+            </div>
+            <div class="form__item">
+                {{ form.sma1.label(class="form__label") }}
+                {% if form.sma1.errors %}
+                    {{ form.sma1(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.sma1.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.sma1(class="form__input") }}
+                {% endif %}
+            </div>
+                    <div class="form__item">
+                    {{ form.sma2.label(class="form__label") }}
+                    {% if form.sma2.errors %}
+                        {{ form.sma2(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.sma2.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.sma2(class="form__input") }}
+                    {% endif %}
+                </div>
+                <div class="form__item">
+                        {{ form.ewm1.label(class="form__label") }}
+                        {% if form.ewm1.errors %}
+                            {{ form.ewm1(class="form-control form-control-lg is-invalid") }}
+                             <div class="invalid-feedback">
+                                {% for error in form.ewm1.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                             </div>
+                        {% else %}
+                            {{ form.ewm1(class="form__input") }}
+                        {% endif %}
+                </div>
+                <div class="form__item1" id="item2">
+                    <ul class="ul2">
+                        <li class="22" id="row2">
+                                {{ form.rsi.label(class="form__label") }}
+                                {{ form.rsi(class="form-check-input") }}
+                        </li>
+
+                        <li id="atr">
+
+                            {{ form.trueRange(class="form-check-input") }}
+                             {{ form.trueRange.label(class="form__label") }}
+                         </li>
+                    </ul>
+                    <ul class="ul2">
+                        <div class="form check form-switch form-check-inline">
+                                {{ form.bolinger_band(class="form-check-input",type="checkbox")}}
+                                {{form.bolinger_band.label(class="form-check-label") }}
+                      
+                             
+                            {{ form.macd(type='checkbox',class="form-check-input" )}}
+                            {{ form.macd.label(class="form-check-label") }}
+                        </div>
+
+                
+                    </ul>
+                 </div>
+                <div class="form__item" id="btn1">
+                        {{ form.submit(class="form__btn" ) }}
+                </div>
+        </form>
+
+        {% if fig1 %}
+        <div class="warpper3">
+                    {% autoescape off %}
+                    {{ fig1 }}
+                    {% endautoescape %}
+        </div>
+        {% endif %}
+    </div>
+
+ <script>
+        var el_down = document.getElementById("r1");
+
+        function gfg_Run() {
+            $("#radio").prop("checked", false);
+            el_down.innerHTML = "Unchecked";
+        }
+    </script>
+{% endblock content %}

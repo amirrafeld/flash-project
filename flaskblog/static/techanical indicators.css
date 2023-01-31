@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+html{
+ height:100%;}
+.conteinter{
+ color:#ffffff;
+  font-weight:150px;
+   display:flex;
+   margin-left:20px;
+    flex-direction:row;
+    align-items:top;}
+
+.form{
+  width:20%;
+   margin-left:25px;
+  font-size:16px;}
+
+div input{
+ font-height:150px;}
+
+.form * {
+  border:2px solid;
+    box-sizing:border-box;
+    line-height:1.5;}
+
+.form__title{
+      margin-top:15px;
+      font-size:1.5em;}
+
+.form__item{
+       display: flex;
+
+        flex-direction:column;
+        margin-bottom:5px;}
+
+
+.form__label{
+      padding:10px 0;}
+
+.form__input{
+   webkit-appearance:none;
+    max-width:70%;
+    font-size:0.9em
+    outline:none;
+    border:1px solid #dddddd;
+    background: #ffffff;
+    transition:background 0.25,border-color 0.25s color 0.25;
+    }
+.form__input:focus{background:#ffffff}
+
+
+.form__input::placeholder{
+    color:#bbbbbb}
+
+.form__btn{
+    background:white;
+    font-weight:150;
+    font-size:1em;
+    padding:10px 16px;
+    margin:10px 0;
+    outline:none;
+    border-radius: 5px;
+    border:1px solid #00aaee ;
+    cursor:pointer:
+    color: #ffffff}
+
+ div ul{
+  margin-bottom: auto;
+  max-width:82%;
+  display:flex;
+
+  font-size: 0.85em;
+  justify-content:start;
+
+  flex-direction:row;}
+
+div ul li {list-style:none;
+          max-width:55%;
+          min-width:54%;
+    }
+div ul li select{
+  padding-left:10px;}
+
+.ul2 li{
+   position:relative;
+
+  font-size:1.0em;}
+
+.ul2 li input{
+    position:absolute;
+    left: 8.7em;
+    top:0.5em;}
+
+
+#btn1{
+ max-width:73%;}
+
+#btn1 input{
+  margin-left:auto;
+   color:#ffffff;
+   border-radius:7px;
+   background-color: #3A3B3C;
+   border-style:solid;
+
+   border-color:#242526;
+  }
+#btn1 input:hover {
+  border-color:#1589FF}
+
+#atr input{
+ position:absolute;
+  left:7em;}
+#macd input{
+ position:absolute;
+  left:7em;}
+
+.warpper2.{margin-top:6px;}
+
+svg{
+ fill:#ffffff;}
